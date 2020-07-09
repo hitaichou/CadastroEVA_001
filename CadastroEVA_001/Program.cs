@@ -19,14 +19,27 @@ namespace CadastroEVA_001
             Console.WriteLine("Entre com os dados do Pedido:");
             Console.Write("Status: ");
             OrderStatus status = Enum.Parse<OrderStatus>(Console.ReadLine());
+
+            //----------------------------------------------
+            //----------------------------------------------
+            Console.WriteLine("Entre com a Qtd de Horas Trabalhadas");
+            double qtHrtrab = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Entre com o Desconto:");
+            double descPorc = double.Parse(Console.ReadLine());
+
+            //----------------------------------------------
+            //----------------------------------------------
+
+
             Console.WriteLine("Quantos itens deseja cadastrar?");
             int n = int.Parse(Console.ReadLine());
 
-            dtMoment = DateTime.Now;
+            dtMoment = DateTime.Now;            
 
             Client cli = new Client(nmClient);
             //associando entrada
-            Order order = new Order(dtMoment, status, cli);
+            Order order = new Order(dtMoment, status, cli, qtHrtrab, descPorc);
 
             for (int i = 1; i <= n; i++)
             {
@@ -50,6 +63,20 @@ namespace CadastroEVA_001
                     OrderItem items = new OrderItem(idProduto, qtProduto, product);
                     order.AddItem(items); //adiciona no pedido 
             }
+
+            //----------------------------------------------
+            //----------------------------------------------
+            /*Console.WriteLine("Entre com a Qtd de Horas Trabalhadas");
+            double qtHrtrab = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Entre com o Desconto:");
+            double descPorc = double.Parse(Console.ReadLine());
+
+            order = new Order(qtHrtrab, descPorc);*/
+
+            //----------------------------------------------
+            //----------------------------------------------
+
             Console.WriteLine();
             Console.WriteLine("RESUMO DO PEDIDO:");
             Console.WriteLine(order);

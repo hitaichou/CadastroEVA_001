@@ -7,9 +7,13 @@ namespace CadastroEVA_001.Entities
         public int Id { get; set; }
         public int Quantity { get; set; }
         public double Price { get; set; }
-        public string Name { get; set; }        
+        public string Name { get; set; }
+        //public double QtMaoDeObra { get; set; }
+        //public double VlDesconto { get; set; }
         public Product Product { get; set; } = new Product();
+        //public WorkHour WorkHour { get; set; } = new WorkHour();
         //private double _vlSubTotal;
+        //private double _vlBasePrice;
         //private double _vlPrice = 0;
 
 
@@ -25,10 +29,18 @@ namespace CadastroEVA_001.Entities
             Quantity = quantity;
             Product = product;
         }
+        /*public OrderItem(double qtmaodeobra, double vldesconto)
+        {
+            QtMaoDeObra = qtmaodeobra;            
+            VlDesconto = VlDesconto;
+        }*/
+
         //METODOS
         public double SubTotal()
-        {            
-            return (Quantity * Product.ValorProdutos(Id));
+        {
+            //_vlBasePrice = (Quantity * Product.ValorProdutos(Id));
+            //_vlSubTotal = WorkHour.CalculaPreco(QtMaoDeObra, _vlBasePrice, VlDesconto);
+            return (Quantity * Product.ValorProdutos(Id));//_vlSubTotal;
         }
        
         public override string ToString()
