@@ -82,7 +82,7 @@ namespace CadastroEVA_001.Entities
         public string NomeProdutos(int id)
         {
             //-------------------------------------
-            //METODO PARA APLICAR VALOR DO PRODUTO
+            //METODO PARA APLICAR NOME DO PRODUTO
             //-------------------------------------
 
             switch (id)

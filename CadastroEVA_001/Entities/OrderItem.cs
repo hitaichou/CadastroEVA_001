@@ -8,14 +8,7 @@ namespace CadastroEVA_001.Entities
         public int Quantity { get; set; }
         public double Price { get; set; }
         public string Name { get; set; }
-        //public double QtMaoDeObra { get; set; }
-        //public double VlDesconto { get; set; }
         public Product Product { get; set; } = new Product();
-        //public WorkHour WorkHour { get; set; } = new WorkHour();
-        //private double _vlSubTotal;
-        //private double _vlBasePrice;
-        //private double _vlPrice = 0;
-
 
         //CONSTRUTORES
         public OrderItem()
