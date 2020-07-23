@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CadastroEVA_001.Entities
+﻿namespace CadastroEVA_001.Entities
 {
     class WorkHour
     {
@@ -12,7 +8,7 @@ namespace CadastroEVA_001.Entities
         private double _vlLucro = 2; //valor fixo para calculo lucro
         private double _vlPrecoBruto;
         private double _vlPrecoTotal;
-       public double QtMaoDeObra { get; set; }
+        public double QtMaoDeObra { get; set; }
         public double VlPrecoCusto { get; set; }
         public double VlDesconto { get; set; }
         public Product Product { get; set; } = new Product();
